@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume Signal — AI Resume Analyzer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <div class="grid-field" aria-hidden="true"></div>
+
+  <div class="app">
+
+    <header class="hero">
+      <div class="hero-illustration-wrap">
+        <svg class="hero-illustration" viewBox="0 0 200 200" aria-hidden="true">
+          <rect class="doc" x="50" y="18" width="100" height="150" rx="8"/>
+          <line class="doc-line" x1="66" y1="44" x2="134" y2="44"/>
+          <line class="doc-line" x1="66" y1="59" x2="134" y2="59"/>
+          <line class="doc-line short" x1="66" y1="74" x2="112" y2="74"/>
+          <line class="doc-line" x1="66" y1="96" x2="134" y2="96"/>
+          <line class="doc-line" x1="66" y1="111" x2="134" y2="111"/>
+          <line class="doc-line short" x1="66" y1="126" x2="104" y2="126"/>
+          <line class="doc-line" x1="66" y1="144" x2="120" y2="144"/>
+          <rect class="scan-beam" x="46" y="20" width="108" height="14" rx="4"/>
+          <g class="badge badge-a">
+            <circle cx="172" cy="66" r="14"/>
+            <path d="M166 66L170 70L178 61" />
+          </g>
+          <g class="badge badge-b">
+            <circle cx="30" cy="120" r="11"/>
+            <path d="M25.5 120L29 123.5L35 116.5" />
+          </g>
+        </svg>
+      </div>
+      <div class="hero-copy">
+        <h1>Know exactly where your resume stands.</h1>
+        <p class="hero-sub">Upload your resume and pick a target role — get a live skill-match score, the gaps holding you back, and a concrete plan to close them.</p>
+      </div>
+    </header>
+
+    <form id="analyzer-form" class="panel">
+
+      <div class="field-block">
+        <p class="field-label">Target role</p>
+        <div class="role-grid" id="role-grid" role="radiogroup" aria-label="Target job role">
+          {% for role in job_roles %}
+          <input type="radio" name="job_role" id="role-{{ loop.index }}" value="{{ role }}" class="role-radio" {% if loop.first %}required{% endif %}>
+          <label for="role-{{ loop.index }}" class="role-chip" data-role="{{ role }}">
+            <span class="role-icon"></span>
+            <span class="role-name">{{ role }}</span>
+          </label>
+          {% endfor %}
+          <span class="role-indicator" id="role-indicator" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="field-block">
+        <p class="field-label">Resume file</p>
+        <label class="upload-zone" id="upload-zone" for="resume">
+          <input type="file" id="resume" name="resume" accept=".pdf,.docx,.txt" required hidden>
+          <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M12 15V4" stroke-linecap="round"/>
+            <path d="M7 8L12 3L17 8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 15V18C4 19.1 4.9 20 6 20H18C19.1 20 20 19.1 20 18V15" stroke-linecap="round"/>
+          </svg>
+          <p class="upload-text"><span class="upload-browse">Choose a file</span> or drop it here</p>
+          <p class="upload-hint">PDF, DOCX or TXT</p>
+          <p class="upload-filename" id="upload-filename"></p>
+        </label>
+      </div>
+
+      <button type="submit" id="analyze-btn">
+        <span class="btn-label">Analyze resume</span>
+        <span class="btn-pulse" aria-hidden="true"></span>
+      </button>
+      <p id="error-msg" class="error hidden"></p>
+    </form>
+
+    <section id="loading" class="loading-panel hidden">
+      <div class="pulse-rings" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+      <p id="loading-text">Scanning resume…</p>
+    </section>
+
+    <section id="results" class="hidden">
+
+      <div class="panel score-panel">
+        <div class="dial-wrap">
+          <svg viewBox="0 0 120 120" class="dial">
+            <circle class="dial-track" cx="60" cy="60" r="52"/>
+            <circle class="dial-progress" id="dial-progress" cx="60" cy="60" r="52"/>
+          </svg>
+          <div class="dial-label"><span id="score-value">0</span><span class="dial-percent">%</span></div>
+        </div>
+        <div class="score-copy">
+          <h2 id="role-title"></h2>
+          <p id="verdict-text"></p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="panel reveal-panel">
+          <h3>Matched skills</h3>
+          <div id="matched-skills" class="tag-list"></div>
+        </div>
+        <div class="panel reveal-panel">
+          <h3>Missing core skills</h3>
+          <div id="missing-skills" class="tag-list"></div>
+        </div>
+      </div>
+
+      <div class="panel reveal-panel">
+        <h3>Resume quality checks</h3>
+        <ul id="quality-list" class="quality-list"></ul>
+      </div>
+
+      <div class="panel reveal-panel">
+        <h3>Close the core gaps</h3>
+        <ul id="recommendations-list" class="recommend-list"></ul>
+      </div>
+
+      <div class="panel reveal-panel">
+        <h3>Bonus skills for this role</h3>
+        <ul id="stretch-list" class="recommend-list"></ul>
+      </div>
+
+      <button id="reset-btn" class="secondary-btn">Analyze another resume</button>
+    </section>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
