@@ -1,0 +1,173 @@
+{
+  "Data Scientist": {
+    "required_skills": ["python", "sql", "machine learning", "statistics", "pandas", "numpy", "data visualization", "scikit-learn"],
+    "nice_to_have": ["deep learning", "tensorflow", "pytorch", "big data", "spark", "aws"],
+    "resources": {
+      "python": "Python for Data Science (Coursera - IBM)",
+      "sql": "SQL for Data Analysis (Udacity/Mode)",
+      "machine learning": "Machine Learning Specialization (Andrew Ng, Coursera)",
+      "statistics": "Statistics with Python (Coursera - Duke)",
+      "pandas": "Data Analysis with Pandas (Kaggle Learn - free)",
+      "numpy": "NumPy Fundamentals (Kaggle Learn - free)",
+      "data visualization": "Data Visualization with Python (Coursera - IBM)",
+      "scikit-learn": "Scikit-learn official tutorials (free)",
+      "deep learning": "Deep Learning Specialization (Andrew Ng, Coursera)",
+      "tensorflow": "TensorFlow Developer Certificate course",
+      "pytorch": "PyTorch for Deep Learning (Udacity/freeCodeCamp)",
+      "big data": "Big Data Specialization (Coursera - UCSD)",
+      "spark": "Apache Spark Fundamentals (Databricks Academy - free)",
+      "aws": "AWS Certified Cloud Practitioner"
+    }
+  },
+  "Web Developer": {
+    "required_skills": ["html", "css", "javascript", "react", "git", "responsive design", "rest api"],
+    "nice_to_have": ["node.js", "typescript", "next.js", "docker", "testing"],
+    "resources": {
+      "html": "HTML & CSS Full Course (freeCodeCamp - free)",
+      "css": "CSS Flexbox & Grid (freeCodeCamp - free)",
+      "javascript": "The Modern JavaScript Bootcamp",
+      "react": "React - The Complete Guide (Udemy)",
+      "git": "Git & GitHub Crash Course (freeCodeCamp - free)",
+      "responsive design": "Responsive Web Design Certification (freeCodeCamp - free)",
+      "rest api": "REST API Design (Postman Academy - free)",
+      "node.js": "Node.js, Express, MongoDB Bootcamp",
+      "typescript": "TypeScript Deep Dive (free ebook)",
+      "next.js": "Next.js official tutorial (free)",
+      "docker": "Docker for Developers (Udemy)",
+      "testing": "Testing JavaScript (Jest/Cypress course)"
+    }
+  },
+  "Software Engineer": {
+    "required_skills": ["data structures", "algorithms", "git", "object oriented programming", "python", "java", "system design", "testing"],
+    "nice_to_have": ["docker", "kubernetes", "ci/cd", "cloud", "microservices"],
+    "resources": {
+      "data structures": "Data Structures & Algorithms (Coursera - UCSD)",
+      "algorithms": "Algorithms Specialization (Stanford, Coursera)",
+      "git": "Git & GitHub Crash Course (freeCodeCamp - free)",
+      "object oriented programming": "OOP in Java/Python (Udemy)",
+      "python": "Python for Everybody (Coursera - Michigan)",
+      "java": "Java Programming Masterclass (Udemy)",
+      "system design": "Grokking the System Design Interview",
+      "testing": "Software Testing Fundamentals (Coursera)",
+      "docker": "Docker for Developers (Udemy)",
+      "kubernetes": "Kubernetes for Developers (Linux Foundation)",
+      "ci/cd": "CI/CD with GitHub Actions (free docs)",
+      "cloud": "AWS Certified Cloud Practitioner",
+      "microservices": "Microservices Architecture (Coursera)"
+    }
+  },
+  "Data Analyst": {
+    "required_skills": ["excel", "sql", "python", "data visualization", "tableau", "statistics", "power bi"],
+    "nice_to_have": ["r", "google analytics", "etl"],
+    "resources": {
+      "excel": "Excel Skills for Business (Coursera - Macquarie)",
+      "sql": "SQL for Data Analysis (Udacity/Mode)",
+      "python": "Python for Data Analysis (Coursera - IBM)",
+      "data visualization": "Data Visualization with Tableau",
+      "tableau": "Tableau Public tutorials (free)",
+      "statistics": "Statistics with Python (Coursera - Duke)",
+      "power bi": "Microsoft Power BI Certification",
+      "r": "R Programming (Coursera - JHU)",
+      "google analytics": "Google Analytics Academy (free)",
+      "etl": "ETL Pipelines with Python (Udemy)"
+    }
+  },
+  "DevOps Engineer": {
+    "required_skills": ["linux", "docker", "kubernetes", "ci/cd", "cloud", "terraform", "scripting", "monitoring"],
+    "nice_to_have": ["aws", "azure", "ansible", "python"],
+    "resources": {
+      "linux": "Linux Command Line Basics (freeCodeCamp - free)",
+      "docker": "Docker for Developers (Udemy)",
+      "kubernetes": "Kubernetes for Developers (Linux Foundation)",
+      "ci/cd": "CI/CD with GitHub Actions (free docs)",
+      "cloud": "AWS Certified Cloud Practitioner",
+      "terraform": "Terraform Associate Certification (HashiCorp)",
+      "scripting": "Bash Scripting Tutorial (freeCodeCamp - free)",
+      "monitoring": "Prometheus & Grafana Fundamentals",
+      "aws": "AWS Certified SysOps Administrator",
+      "azure": "Microsoft Azure Fundamentals (AZ-900)",
+      "ansible": "Ansible for DevOps (free docs)",
+      "python": "Python for Everybody (Coursera - Michigan)"
+    }
+  },
+  "UI/UX Designer": {
+    "required_skills": ["figma", "wireframing", "user research", "prototyping", "design systems", "usability testing"],
+    "nice_to_have": ["html", "css", "adobe xd", "accessibility"],
+    "resources": {
+      "figma": "Figma UI/UX Design Essentials",
+      "wireframing": "Wireframing Fundamentals (Coursera)",
+      "user research": "UX Research at Scale (Coursera - Google)",
+      "prototyping": "Prototyping and Design (Coursera - Google)",
+      "design systems": "Design Systems for Product Teams",
+      "usability testing": "Usability Testing Basics (NN/g free articles)",
+      "html": "HTML & CSS Full Course (freeCodeCamp - free)",
+      "css": "CSS Flexbox & Grid (freeCodeCamp - free)",
+      "adobe xd": "Adobe XD Essential Training",
+      "accessibility": "Web Accessibility (Coursera - Google)"
+    }
+  },
+  "Product Manager": {
+    "required_skills": ["product strategy", "roadmapping", "stakeholder management", "agile", "user research", "data analysis"],
+    "nice_to_have": ["sql", "a/b testing", "figma"],
+    "resources": {
+      "product strategy": "Digital Product Management (Coursera - Virginia)",
+      "roadmapping": "Product Roadmap Fundamentals (Product School)",
+      "stakeholder management": "Stakeholder Management Course (Coursera)",
+      "agile": "Agile with Atlassian Jira (Coursera)",
+      "user research": "UX Research at Scale (Coursera - Google)",
+      "data analysis": "Data Analysis for Product Managers",
+      "sql": "SQL for Data Analysis (Udacity/Mode)",
+      "a/b testing": "A/B Testing (Udacity/Google)",
+      "figma": "Figma UI/UX Design Essentials"
+    }
+  },
+  "Machine Learning Engineer": {
+    "required_skills": ["python", "machine learning", "deep learning", "tensorflow", "pytorch", "mlops", "sql", "statistics"],
+    "nice_to_have": ["docker", "kubernetes", "cloud", "spark"],
+    "resources": {
+      "python": "Python for Everybody (Coursera - Michigan)",
+      "machine learning": "Machine Learning Specialization (Andrew Ng, Coursera)",
+      "deep learning": "Deep Learning Specialization (Andrew Ng, Coursera)",
+      "tensorflow": "TensorFlow Developer Certificate course",
+      "pytorch": "PyTorch for Deep Learning (Udacity/freeCodeCamp)",
+      "mlops": "MLOps Specialization (Coursera - DeepLearning.AI)",
+      "sql": "SQL for Data Analysis (Udacity/Mode)",
+      "statistics": "Statistics with Python (Coursera - Duke)",
+      "docker": "Docker for Developers (Udemy)",
+      "kubernetes": "Kubernetes for Developers (Linux Foundation)",
+      "cloud": "AWS Certified Cloud Practitioner",
+      "spark": "Apache Spark Fundamentals (Databricks Academy - free)"
+    }
+  },
+  "Digital Marketing Specialist": {
+    "required_skills": ["seo", "content marketing", "google analytics", "social media marketing", "email marketing", "ppc"],
+    "nice_to_have": ["copywriting", "canva", "hubspot"],
+    "resources": {
+      "seo": "SEO Fundamentals (HubSpot Academy - free)",
+      "content marketing": "Content Marketing Certification (HubSpot - free)",
+      "google analytics": "Google Analytics Academy (free)",
+      "social media marketing": "Social Media Marketing (Coursera - Meta)",
+      "email marketing": "Email Marketing Certification (HubSpot - free)",
+      "ppc": "Google Ads Certification (free)",
+      "copywriting": "Copywriting Fundamentals (Coursera)",
+      "canva": "Canva Design Essentials (free tutorials)",
+      "hubspot": "HubSpot Inbound Marketing Certification (free)"
+    }
+  },
+  "Cybersecurity Analyst": {
+    "required_skills": ["network security", "siem", "incident response", "risk assessment", "linux", "python", "vulnerability assessment"],
+    "nice_to_have": ["cloud security", "penetration testing", "compliance"],
+    "resources": {
+      "network security": "Network Security (Coursera - Google Cybersecurity)",
+      "siem": "SIEM Fundamentals (Splunk free training)",
+      "incident response": "Incident Response Fundamentals (Coursera)",
+      "risk assessment": "Risk Management Fundamentals (Coursera)",
+      "linux": "Linux Command Line Basics (freeCodeCamp - free)",
+      "python": "Python for Everybody (Coursera - Michigan)",
+      "vulnerability assessment": "Vulnerability Assessment (Coursera - Google)",
+      "cloud security": "AWS Security Fundamentals",
+      "penetration testing": "Intro to Penetration Testing (TryHackMe - free)",
+      "compliance": "GRC Fundamentals (Coursera)"
+    }
+  }
+}
